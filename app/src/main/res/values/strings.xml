@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Моя Пошта</string>
+
+    <!-- Registration activity -->
+    <string name="text_please_waite_reg">Зачекайте пока завершиться реєстрація…</string>
+    <string name="text_registration">Реєстрація</string>
+    <string name="text_reg_finish">Реєстрація завершена</string>
+
+    <!-- Registration layout -->
+    <string name="text_agreeing">Реєстручуючись я підтверджую що ознайомлений(а) з Політикою конфіденційності та даю згоду на обробку моїх персональних даних</string>
+    <string name="text_phone">Номер телефону</string>
+    <string name="text_contact">ПІБ</string>
+    <string name="text_pass_2">Повторіть пароль</string>
+    <string name="text_pass_1">Пароль</string>
+
+    <!-- Authorization activity -->
+    <string name="text_please_waite">Зачекайте пока завершиться авторизація…</string>
+    <string name="text_auth">Авторизація</string>
+    <string name="text_auth_finish">Авторизація завершина</string>
+
+    <!-- Authorization layout -->
+    <string name="text_exit">Увійти</string>
+    <string name="text_create_ac">Створити обліковий запис</string>
+
+    <!-- Text layout menu-->
+    <string name="bnt_myPackage">Мої\nпосилки</string>
+    <string name="btn_createPackages">Створити\nпосилку</string>
+    <string name="btn_department">Відділення</string>
+    <string name="btn_call_courier">Викликати\nкур\'єра</string>
+    <string name="btn_support_center">Центер\nпідтримки</string>
+    <string name="btn_payParcel">Сплатити\nосилку</string>
+    <string name="text_call_delivery_gay">Виклик кур\'єра</string>
+
+    <!-- Text Support center-->
+    <string name="text_call_back">Замовити зворотній дзвінок</string>
+    <string name="text_help">Потрібна допомога?</string>
+    <string name="text_2">Центр підтримки</string>
+
+    <!-- Error text -->
+    <string name="text_no_correct_pass">Пароль не вірний!</string>
+    <string name="text_user_is_reg">Такий користувач зареєстрований!</string>
+    <string name="field_is_empty">Поле пусте!</string>
+    <string name="field_pass_is_empty">Поле пароля пусте!</string>
+    <string name="field_pass_is_empty_or_l6">Поле пароля пусте або менше 6 символів</string>
+    <string name="passwords_not_similar">Паролі не співпадають</string>
+    <string name="number_no_correct">Номер не коректний!</string>
+    <string name="input_correct_email">Введіть коректну електронну адресу!</string>
+    <string name="not_user">Такий користувач не зареєстрований!</string>
+    <string name="not_number">"Такий номер не існує!"</string>
+
+    <!-- street -->
+
+    <string name="street_1">№1 вул. Кіото, 19</string>
+    <string name="street_2">№2 вул. Лобачевського, 23</string>
+    <string name="street_3">№3 вул. Бастіонна, 5</string>
+    <string name="street_4">№4вул. Олександра Мішуги, 4</string>
+    <string name="street_5">№5 вул. Бережанська, 12–14</string>
+    <string name="street_6">№6 вул. Миколи Лескова, 3А</string>
+    <string name="street_7">№7 вул. Верхній Вал, 40</string>
+    <string name="street_8">№8 просп. Перемоги, 10</string>
+    <string name="street_9">№9 вул. Полковника Шутова, 4–8</string>
+    <string name="street_10">№10 вул. Миколи Бажана, 9</string>
+    <string name="street_11">№11 вул. Дніпровська набережна, 33</string>
+    <string name="street_12">№12 вул. Дарницький бульвар, 8</string>
+    <string name="street_13">№13 бул. Вацлава Гавела, 16Б</string>
+    <string name="street_14">№14 просп. Відраний, 6/1</string>
+    <string name="street_15">№15 вул. Братів Зерових, 25</string>
+    <string name="street_16">№16 вул. Гвардійська, 2А</string>
+
+
+    <string-array name="street">
+        <item>№1 вул. Кіото, 19</item>
+        <item>№2 вул. Лобачевського, 23</item>
+        <item>№3 вул. Бастіонна, 5</item>
+        <item>№4 вул. Олександра Мішуги, 4</item>
+        <item>№5 вул. Бережанська, 12–14</item>
+        <item>№6 вул. Миколи Лескова, 3А</item>
+        <item>№7 вул. Верхній Вал, 40</item>
+        <item>№8 просп. Перемоги, 10</item>
+        <item>№9 вул. Полковника Шутова, 4–8</item>
+        <item>№10 вул. Миколи Бажана, 9</item>
+        <item>№11 вул. Дніпровська набережна, 33</item>
+        <item>№12 вул. Дарницький бульвар, 8</item>
+        <item>№13 бул. Вацлава Гавела, 16Б</item>
+        <item>№14 просп. Відраний, 6/1</item>
+        <item>№15 вул. Братів Зерових, 25</item>
+        <item>№16 вул. Гвардійська, 2А</item>
+    </string-array>
+
+
+</resources>

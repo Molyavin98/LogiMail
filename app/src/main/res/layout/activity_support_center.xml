@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SupportCenterActivity">
+
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/back"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_2"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnBack"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack">
+    </TextView>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack">
+    </View>
+
+
+
+    <TextView
+        android:id="@+id/textHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_help"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line">
+    </TextView>
+
+
+    <ImageButton
+        android:id="@+id/btnTelegram"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/telegram"
+        android:scaleType="fitCenter"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@id/btnViber"
+        app:layout_constraintStart_toStartOf="@id/textHelp"
+        app:layout_constraintTop_toBottomOf="@id/textHelp">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/btnViber"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/viber"
+        android:scaleType="fitCenter"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/btnTelegram"
+       app:layout_constraintEnd_toEndOf="@id/textHelp"
+        app:layout_constraintTop_toBottomOf="@id/textHelp">
+    </ImageButton>
+
+    <Button
+        android:id="@+id/btnCallSupport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_call_back"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/blue"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
