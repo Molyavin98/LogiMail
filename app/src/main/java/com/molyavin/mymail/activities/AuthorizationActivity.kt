@@ -4,7 +4,9 @@ import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.SharedPreferences
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,15 +17,18 @@ import com.molyavin.mymail.R
 import com.molyavin.mymail.check_error.CheckErrorUser
 
 import com.molyavin.mymail.databinding.ActivityAuthorizationBinding
+import com.molyavin.mymail.utis.NetworkChangeListener
 
 @SuppressLint("StaticFieldLeak")
 private lateinit var binding: ActivityAuthorizationBinding
 
 private lateinit var mAuth: FirebaseAuth
 private lateinit var progressDialog: ProgressDialog
+
 @SuppressLint("StaticFieldLeak")
 private lateinit var check: CheckErrorUser
 private lateinit var mSettings: SharedPreferences
+private val networkChangeListener: NetworkChangeListener = NetworkChangeListener()
 
 const val USER_DATA_AUTH: String = "user_auth"
 const val USER_ID: String = "user_id"
@@ -47,11 +52,12 @@ class AuthorizationActivity : AppCompatActivity() {
         onClickListener()
     }
 
-    private fun  onClickListener(){
+    private fun onClickListener() {
 
         binding.btnRegistration.setOnClickListener {
-            val intent = Intent(this, RegistrationActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, RegistrationActivity::class.java))
+            overridePendingTransition(R.anim.slidein, R.anim.slideout)
+
         }
 
         binding.btnAuthorization.setOnClickListener {
@@ -79,11 +85,15 @@ class AuthorizationActivity : AppCompatActivity() {
                         progressDialog.dismiss()
                         sendUserToNextActivity()
                         saveDataAuthLocal(email, passwordOne, mAuth.uid.toString())
-                        Toast.makeText(this, getString(R.string.text_auth_finish), Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            this,
+                            getString(R.string.text_auth_finish),
+                            Toast.LENGTH_LONG
+                        ).show()
                         binding.textPassword.error = null
                     } else {
                         progressDialog.dismiss()
-                        if(!check.checkPasswordAuth(binding.textPassword)){
+                        if (!check.checkPasswordAuth(binding.textPassword)) {
                             binding.textPassword.error = getString(R.string.text_no_correct_pass)
                         }
                         binding.fieldEmail.error = getString(R.string.not_user)
@@ -93,7 +103,7 @@ class AuthorizationActivity : AppCompatActivity() {
     }
 
     @SuppressLint("ObsoleteSdkInt")
-    private fun saveDataAuthLocal(email: String, pass: String, userId:String) {
+    private fun saveDataAuthLocal(email: String, pass: String, userId: String) {
 
         val editor: SharedPreferences.Editor = mSettings.edit()
 
@@ -115,6 +125,17 @@ class AuthorizationActivity : AppCompatActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
+    }
+
+    override fun onStart() {
+        val filter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
+        registerReceiver(networkChangeListener,filter)
+        super.onStart()
+    }
+
+    override fun onStop() {
+        unregisterReceiver(networkChangeListener)
+        super.onStop()
     }
 
     override fun onBackPressed() {}

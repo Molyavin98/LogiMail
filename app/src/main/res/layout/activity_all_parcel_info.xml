@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/blue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_btn_done"
+            android:layout_gravity=""
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored">
+        </Button>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDone">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_shipping_data"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="26sp"/>
+
+    <TextView
+        android:id="@+id/ttn_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0000000000"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"/>
+
+
+    <TextView
+        android:id="@+id/fullNameSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Відправник: Молявін Артьом Іванович"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/numberSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Телефон: +380955528889"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/addressSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Адреса відправлення: Лобачевського 23"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/fullNameRecipient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Отримувач: Молявін Артьом Іванович"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/numberRecipient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Телефон: +380955528889"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+
+    <TextView
+        android:id="@+id/addressesRecipient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Адреса отримання: Лобачевського 23"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/typeParcel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Посилка: "
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Оплата: "
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textSize="14sp">
+    </TextView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        tools:text="Статус: Відправник самостійно створив цю накладну, але ще не надав до відправки "
+        android:textColor="@color/white"
+        android:textSize="12sp">
+    </TextView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/text_payment"
+        android:textColor="@color/blue"
+        android:visibility="invisible"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </Button>
+
+    <Button
+        android:id="@+id/cancelOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAllCaps="false"
+        android:text="@string/cancel_order"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.molyavin.mymail.database
+package com.molyavin.mymail.utis
 
 class Users {
 

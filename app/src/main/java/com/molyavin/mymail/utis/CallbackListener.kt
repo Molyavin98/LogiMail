@@ -1,4 +1,4 @@
-package com.molyavin.mymail.call_delivery_gay
+package com.molyavin.mymail.utis
 
 interface CallbackListener {
     fun onDataReceived(data: String)

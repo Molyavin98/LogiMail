@@ -83,7 +83,7 @@
             android:layout_marginEnd="20dp"
             app:helperText="my.mail@gmail.com"
             app:startIconDrawable="@drawable/email_image"
-            android:hint="Email"
+            android:hint="@string/text_email"
             app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

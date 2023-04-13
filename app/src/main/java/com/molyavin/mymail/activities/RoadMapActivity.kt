@@ -2,6 +2,8 @@ package com.molyavin.mymail.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.IntentFilter
+import android.net.ConnectivityManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -15,10 +17,12 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.molyavin.mymail.MenuActivity
 import com.molyavin.mymail.R
 import com.molyavin.mymail.databinding.ActivityRoadMapBinding
+import com.molyavin.mymail.utis.NetworkChangeListener
 
 class RoadMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var binding: ActivityRoadMapBinding
+    private val networkChangeListener: NetworkChangeListener = NetworkChangeListener()
     private lateinit var mMap: GoogleMap
 
     @SuppressLint("ResourceType")
@@ -35,8 +39,8 @@ class RoadMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
         binding.btnBack.setOnClickListener {
-            val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, MenuActivity::class.java))
+            overridePendingTransition(R.anim.slidein, R.anim.slideout)
         }
 
     }
@@ -95,4 +99,16 @@ class RoadMapActivity : AppCompatActivity(), OnMapReadyCallback {
         googleMap.animateCamera(cameraUpdate)
 
     }
+
+    override fun onStart() {
+        val filter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
+        registerReceiver(networkChangeListener,filter)
+        super.onStart()
+    }
+
+    override fun onStop() {
+        unregisterReceiver(networkChangeListener)
+        super.onStop()
+    }
+
 }

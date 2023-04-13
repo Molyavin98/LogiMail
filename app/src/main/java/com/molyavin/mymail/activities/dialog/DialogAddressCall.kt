@@ -1,4 +1,4 @@
-package com.molyavin.mymail.call_delivery_gay
+package com.molyavin.mymail.activities.dialog
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.textfield.TextInputLayout
 import com.molyavin.mymail.R
+import com.molyavin.mymail.utis.CallbackListener
 import com.molyavin.mymail.check_error.CheckErrorUser
 
 
@@ -33,6 +35,8 @@ class DialogAddressCall(private val callbackListener: CallbackListener) : Dialog
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         val btnDone: Button = view.findViewById(R.id.btnDone)
         val btnBack: ImageButton = view.findViewById(R.id.btnBack)
         val fieldCity: TextInputLayout = view.findViewById(R.id.fieldCity)
@@ -53,7 +57,7 @@ class DialogAddressCall(private val callbackListener: CallbackListener) : Dialog
             ) {
 
                 callbackListener.onDataReceived(
-                    "Адреса\nм.${fieldCity.editText?.text.toString()}\n" +
+                    "м.${fieldCity.editText?.text.toString()}\n" +
                             "вул.${fieldStreet.editText?.text.toString()}, " +
                             fieldNumBuilder.editText?.text.toString())
                 dismiss()
@@ -61,7 +65,7 @@ class DialogAddressCall(private val callbackListener: CallbackListener) : Dialog
         }
 
         btnBack.setOnClickListener {
-            callbackListener.onDataReceived("Адреса")
+            callbackListener.onDataReceived(getString(R.string.text_address))
             dismiss()
         }
     }

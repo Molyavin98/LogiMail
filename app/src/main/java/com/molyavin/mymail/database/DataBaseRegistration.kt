@@ -2,6 +2,7 @@ package com.molyavin.mymail.database
 
 import android.util.Log
 import com.molyavin.mymail.databinding.ActivityRegistrationBinding
+import com.molyavin.mymail.utis.Users
 
 class DataBaseRegistration(private val binding: ActivityRegistrationBinding, private val idUser:String) : DataBase() {
 

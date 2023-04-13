@@ -70,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Зробіть заявку для виклику кур'єра за адресою"
+            android:text="@string/text_create_statement"
             android:textSize="12sp" />
 
 
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
-            android:text="Інформація про відправника:"
+            android:text="@string/text_info_sender"
             android:textSize="12sp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
@@ -104,7 +104,7 @@
             android:layout_marginBottom="10dp"
             android:gravity="start|center"
             android:textAllCaps="false"
-            android:text="Адреса"
+            android:text="@string/text_address"
             app:drawableEndCompat="@drawable/right_image" />
 
 
@@ -121,7 +121,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:text="Відправник\nМолявін Артьом Іванович\n+380955528889"
+            tools:text="Відправник\nМолявін Артьом Іванович\n+380955528889"
             android:textSize="14sp" />
 
         <View
@@ -139,7 +139,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="15dp"
-            android:hint="Вид посилки"
+            android:hint="@string/text_type_parcel"
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -163,7 +163,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:text="Сплата послуги доставки"
+            android:text="@string/text_pay_parcel"
             android:textSize="14sp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
@@ -174,8 +174,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:theme="@style/Color1SwitchStyle"
-            android:text="Відправник/Одержувач\t"
-            android:textSize="10sp"/>
+            android:text="@string/text_pay_sender_recipient"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
 
 
         <View
@@ -194,7 +195,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="15dp"
-            android:hint="Коментар"
+            android:hint="@string/text_comment"
             app:endIconMode="clear_text"
             android:scrollIndicators=""
             app:counterMaxLength="100"
@@ -217,7 +218,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:backgroundTint="@color/blue"
-            android:text="Відправити заявку"
+            android:text="@string/text_btn_send"
             android:textAllCaps="false"/>
 
     </LinearLayout>

@@ -7,34 +7,45 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
-import com.molyavin.mymail.MenuActivity
 import com.molyavin.mymail.R
-import com.molyavin.mymail.databinding.ActivitySupportCenterBinding
+import com.molyavin.mymail.databinding.ActivityPaymentBinding
 import com.molyavin.mymail.utis.NetworkChangeListener
 
-class SupportCenterActivity : AppCompatActivity() {
+class PaymentActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivitySupportCenterBinding
+    private lateinit var binding: ActivityPaymentBinding
     private val networkChangeListener: NetworkChangeListener = NetworkChangeListener()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySupportCenterBinding.inflate(layoutInflater)
+        binding = ActivityPaymentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
-        binding.btnBack.setOnClickListener {
-            startActivity(Intent(this, MenuActivity::class.java))
-            overridePendingTransition(R.anim.slidein, R.anim.slideout)
-        }
+        binding.ttnText.text = intent.getStringExtra("ttn_text")
 
-        binding.btnCallSupport.setOnClickListener {
-            Toast.makeText(this, getString(R.string.text_toast_wait_to_call), Toast.LENGTH_LONG)
-                .show()
-        }
+        onClickListener()
+
     }
 
+    private fun onClickListener() {
+
+        binding.btnClose.setOnClickListener { onBackPressed() }
+
+        binding.btnGooglePay.setOnClickListener { paymentOnline() }
+        binding.btnApplePay.setOnClickListener { paymentOnline() }
+        binding.btnCryptoPay.setOnClickListener { paymentOnline() }
+    }
+
+
+    private fun paymentOnline() {
+        Toast.makeText(
+            this,
+            getString(R.string.text_toast_payment_is_not_possible),
+            Toast.LENGTH_SHORT
+        ).show()
+    }
 
     override fun onStart() {
         val filter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
@@ -46,4 +57,5 @@ class SupportCenterActivity : AppCompatActivity() {
         unregisterReceiver(networkChangeListener)
         super.onStop()
     }
+
 }

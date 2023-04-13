@@ -1,12 +1,11 @@
 <resources>
+
     <string name="app_name">Моя Пошта</string>
 
     <!-- Registration activity -->
     <string name="text_please_waite_reg">Зачекайте пока завершиться реєстрація…</string>
     <string name="text_registration">Реєстрація</string>
     <string name="text_reg_finish">Реєстрація завершена</string>
-
-    <!-- Registration layout -->
     <string name="text_agreeing">Реєстручуючись я підтверджую що ознайомлений(а) з Політикою конфіденційності та даю згоду на обробку моїх персональних даних</string>
     <string name="text_phone">Номер телефону</string>
     <string name="text_contact">ПІБ</string>
@@ -14,22 +13,59 @@
     <string name="text_pass_1">Пароль</string>
 
     <!-- Authorization activity -->
+    <string name="text_email">Email</string>
     <string name="text_please_waite">Зачекайте пока завершиться авторизація…</string>
     <string name="text_auth">Авторизація</string>
+    <string name="text_data_auth_save">Запам\'ятати дані входу</string>
     <string name="text_auth_finish">Авторизація завершина</string>
-
-    <!-- Authorization layout -->
     <string name="text_exit">Увійти</string>
     <string name="text_create_ac">Створити обліковий запис</string>
-
+    
     <!-- Text layout menu-->
     <string name="bnt_myPackage">Мої\nпосилки</string>
     <string name="btn_createPackages">Створити\nпосилку</string>
     <string name="btn_department">Відділення</string>
     <string name="btn_call_courier">Викликати\nкур\'єра</string>
-    <string name="btn_support_center">Центер\nпідтримки</string>
-    <string name="btn_payParcel">Сплатити\nосилку</string>
+    <string name="btn_support_center">Центр\nпідтримки</string>
+    <string name="btn_response">Відгук</string>
     <string name="text_call_delivery_gay">Виклик кур\'єра</string>
+
+    <!-- CallDeliveryGay Activity -->
+    <string name="text_create_statement">Зробіть заявку для виклику кур\'єра за адресою</string>
+    <string name="text_info_sender">Інформація про відправника:</string>
+    <string name="text_address">Адреса</string>
+    <string name="text_type_parcel">Вид посилки</string>
+    <string name="text_pay_parcel">Сплата послуги доставки</string>
+    <string name="text_pay_sender_recipient">Відправник/Одержувач\t</string>
+    <string name="text_comment">Коментар</string>
+    <string name="text_btn_send">Відправити заявку</string>
+
+    <!-- CreatingParcel Activity -->
+    <string name="text_create_en">Створення EN</string>
+    <string name="text_place_sender">Місце відправки</string>
+    <string name="text_departament">Відділення</string>
+    <string name="text_info_recipient">Інформація про одержувача:</string>
+    <string name="text_place_recipient">Місце Отримання</string>
+    <string name="text_address_departament">Адреса відділення</string>
+    <string name="text_recipient">Одержувач</string>
+    <string name="text_btn_create">Створити</string>
+
+    <!-- MyParcels Activity -->
+    <string name="text_my_parcels">Мої посилки</string>
+    <string name="text_parcel_is_empty">Посилки відсутні</string>
+
+    <!-- Payment Activity -->
+    <string name="text_close">Закрити</string>
+    <string name="text_sum">Cума до сплати: 0.00 грн</string>
+
+    <!--Profile Activity -->
+    <string name="text_profile">Профіль</string>
+    <string name="text_btn_exit_from_acc">Вихід з кабінету</string>
+
+    <!-- Response Activity -->
+    <string name="text_response">Відгук</string>
+    <string name="text_hint_response">Напишіть, будь ласка, відгук…</string>
+    <string name="text_btn_send_response">Відправити</string>
 
     <!-- Text Support center-->
     <string name="text_call_back">Замовити зворотній дзвінок</string>
@@ -48,8 +84,53 @@
     <string name="not_user">Такий користувач не зареєстрований!</string>
     <string name="not_number">"Такий номер не існує!"</string>
 
-    <!-- street -->
+    <!-- Text AllParcelInfoActivity -->
+    <string name="text_shipping_data">Дані про відправлення</string>
+    <string name="text_payment">Сплатити</string>
+    <string name="cancel_order">Скасувати замовлення</string>
+    <string name="text_sender_full_name">Відправник:\t</string>
+    <string name="text_number">Телефон:\t</string>
+    <string name="text_sender_address">Адреса відправлення:\t</string>
+    <string name="text_recipient_full_name">Одержувач\t</string>
+    <string name="text_recipient_address">Адреса отримання:\t</string>
+    <string name="text_parcel">Посилка:\t</string>
+    <string name="text_payment_sender">Оплата: відправник\t</string>
+    <string name="text_payment_recipient">Оплата: одержувач\t</string>
 
+    <!-- Text Toast -->
+    <string name="text_toast_address">Вкажіть адресу!</string>
+    <string name="text_toast_done">Заявка прийнята!</string>
+    <string name="text_toast_enter_address_sender">Вкажіть адресу відправлення!</string>
+    <string name="text_toast_enter_address_recipient">Вкажіть адресу Отримання!</string>
+    <string name="text_toast_data_recipient">Вкажіть дані одержувача!</string>
+    <string name="text_toast_enter_type_parcel">Вкажіть що відправляєте!</string>
+    <string name="text_toast_parcel_create">Посилка створена!</string>
+    <string name="text_toast_payment_is_not_possible">Оплата не можлива, очікуємо посилку!</string>
+    <string name="text_toast_field_is_not_empty">Поле не може бути пустим!</string>
+    <string name="text_toast_thanks_for_response">Дякуємо за відгук!</string>
+    <string name="text_toast_wait_to_call">Очікуйте на дзвінок оператора</string>
+
+    <!-- Text alertDialog -->
+    <string name="text_cancel_parcel">Бажаєте відмовитися від посилки?</string>
+    <string name="text_yes">Так</string>
+    <string name="text_no">Ні</string>
+
+    <!-- Dialog text -->
+    <string name="text_hint_city">Населений пункт</string>
+    <string name="text_hint_street">Вулиця</string>
+    <string name="text_hint_apartments">Будинок</string>
+    <string name="text_data_recipient">Дані одержувача</string>
+
+
+    <!-- Text -->
+    <string name="text_btn_done">Готово</string>
+    <string name="text_status_parcel">Статус: очікує посилку відпраника</string>
+    <string name="text_map_departament">Карта відділень</string>
+    <string name="text_internet_connection">Немає підключення до Інтернету</string>
+    <string name="text_internet">Ой-йо-ой</string>
+    <string name="text_internet_button">Повторити спробу</string>
+
+    <!-- street -->
     <string name="street_1">№1 вул. Кіото, 19</string>
     <string name="street_2">№2 вул. Лобачевського, 23</string>
     <string name="street_3">№3 вул. Бастіонна, 5</string>
@@ -66,7 +147,6 @@
     <string name="street_14">№14 просп. Відраний, 6/1</string>
     <string name="street_15">№15 вул. Братів Зерових, 25</string>
     <string name="street_16">№16 вул. Гвардійська, 2А</string>
-
 
     <string-array name="street">
         <item>№1 вул. Кіото, 19</item>
@@ -86,6 +166,5 @@
         <item>№15 вул. Братів Зерових, 25</item>
         <item>№16 вул. Гвардійська, 2А</item>
     </string-array>
-
 
 </resources>

@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Профіль"
+        android:text="@string/text_profile"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -71,7 +71,7 @@
         android:id="@+id/exitFromAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Вихід з кабінету"
+        android:text="@string/text_btn_exit_from_acc"
         android:layout_marginTop="20dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".auth.AuthorizationActivity">
+    tools:context=".activities.AuthorizationActivity">
 
 
         <ImageView
@@ -24,7 +24,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:hint="Email"
+            android:hint="@string/text_email"
             app:startIconDrawable="@drawable/email_image"
             app:endIconMode="clear_text"
             app:shapeAppearance="@style/Cut"
@@ -63,7 +63,7 @@
         android:id="@+id/saveDataAuth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Запам'ятати дані входу"
+        android:text="@string/text_data_auth_save"
         android:buttonTint="@color/blue"
         app:layout_constraintStart_toStartOf="@id/textPassword"
         app:layout_constraintTop_toBottomOf="@id/textPassword"/>

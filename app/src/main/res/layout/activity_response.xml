@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MyParcelsActivity">
-
+    tools:context=".activities.ResponseActivity">
 
 
     <ImageButton
@@ -22,7 +21,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_my_parcels"
+        android:text="@string/text_response"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -39,37 +38,56 @@
         android:background="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnBack"/>
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
 
-    <TextView
-        android:id="@+id/textParcelIsEmpty"
-        android:layout_width="wrap_content"
+
+
+    <ImageView
+        android:id="@id/image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line">
+    </ImageView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fieldResponse"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/text_parcel_is_empty"
+        android:hint="@string/text_hint_response"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:counterMaxLength="100"
+        app:counterEnabled="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/image">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipeRefreshLayout"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btnSendResponse"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_btn_send_response"
+        android:textAllCaps="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="LinearLayoutManager">
-    </androidx.recyclerview.widget.RecyclerView>
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp">
+    </Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

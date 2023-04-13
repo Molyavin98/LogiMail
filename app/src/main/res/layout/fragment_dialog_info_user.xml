@@ -29,7 +29,7 @@
             android:id="@+id/btnDone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Готово"
+            android:text="@string/text_btn_done"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_gravity=""
             android:layout_marginEnd="15dp"
@@ -45,7 +45,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Дані одержувача"
+        android:text="@string/text_data_recipient"
         android:layout_marginStart="10dp"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -85,7 +85,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:hint="ПІБ"
+        android:hint="@string/text_contact"
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText

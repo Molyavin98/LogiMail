@@ -2,6 +2,8 @@ package com.molyavin.mymail.activities
 
 import android.app.ProgressDialog
 import android.content.Intent
+import android.content.IntentFilter
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -12,6 +14,7 @@ import com.molyavin.mymail.R
 import com.molyavin.mymail.check_error.CheckErrorUser
 import com.molyavin.mymail.database.DataBaseRegistration
 import com.molyavin.mymail.databinding.ActivityRegistrationBinding
+import com.molyavin.mymail.utis.NetworkChangeListener
 
 class RegistrationActivity : AppCompatActivity() {
 
@@ -20,6 +23,7 @@ class RegistrationActivity : AppCompatActivity() {
     private lateinit var progressDialog:ProgressDialog
     private lateinit var mAuth: FirebaseAuth
     private lateinit var db:DataBaseRegistration
+    private val networkChangeListener: NetworkChangeListener = NetworkChangeListener()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,14 +37,13 @@ class RegistrationActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         Log.e("RegAct", mAuth.uid.toString())
 
-
         onClickListener()
     }
 
     private fun onClickListener(){
         binding.btnBack.setOnClickListener {
-            val intent = Intent(this, AuthorizationActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, AuthorizationActivity::class.java))
+            overridePendingTransition(R.anim.slideinback,R.anim.slideoutback)
         }
 
         binding.btnRegistration.setOnClickListener {
@@ -100,6 +103,18 @@ class RegistrationActivity : AppCompatActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
+        overridePendingTransition(R.anim.slideinback,R.anim.slideoutback)
+    }
+
+    override fun onStart() {
+        val filter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
+        registerReceiver(networkChangeListener,filter)
+        super.onStart()
+    }
+
+    override fun onStop() {
+        unregisterReceiver(networkChangeListener)
+        super.onStop()
     }
 
     override fun onBackPressed() {}

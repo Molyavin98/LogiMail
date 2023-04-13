@@ -3,6 +3,7 @@ package com.molyavin.mymail.database
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
+import com.molyavin.mymail.utis.Users
 
 class DataBaseAuth(private val idUser:String) : DataBase() {
 

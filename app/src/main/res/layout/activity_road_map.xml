@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Карта відділень"
+        android:text="@string/text_map_departament"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -48,19 +48,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:name="com.google.android.gms.maps.SupportMapFragment">
     </fragment>
-
-<!--
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line"
-        app:layout_constraintBottom_toBottomOf="parent"/>
--->
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
