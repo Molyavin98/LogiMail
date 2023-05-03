@@ -24,8 +24,6 @@ class MyParcelsActivity : AppCompatActivity(){
         binding = ActivityMyParcelsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         val db = DataBaseMyParcel(binding)
         db.readDataBase()
 

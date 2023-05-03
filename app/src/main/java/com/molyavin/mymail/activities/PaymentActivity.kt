@@ -21,8 +21,6 @@ class PaymentActivity : AppCompatActivity() {
         binding = ActivityPaymentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         binding.ttnText.text = intent.getStringExtra("ttn_text")
 
         onClickListener()

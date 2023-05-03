@@ -24,8 +24,6 @@ class MenuActivity : AppCompatActivity() {
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         mAuth = FirebaseAuth.getInstance()
         val userId: String = mAuth.uid.toString()
 

@@ -22,8 +22,6 @@ class SupportCenterActivity : AppCompatActivity() {
         binding = ActivitySupportCenterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         binding.btnBack.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))
             overridePendingTransition(R.anim.slidein, R.anim.slideout)

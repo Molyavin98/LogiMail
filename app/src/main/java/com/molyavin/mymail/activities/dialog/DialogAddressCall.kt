@@ -35,8 +35,6 @@ class DialogAddressCall(private val callbackListener: CallbackListener) : Dialog
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         val btnDone: Button = view.findViewById(R.id.btnDone)
         val btnBack: ImageButton = view.findViewById(R.id.btnBack)
         val fieldCity: TextInputLayout = view.findViewById(R.id.fieldCity)

@@ -30,8 +30,6 @@ class CallDeliveryGayActivity : AppCompatActivity(), CallbackListener {
         binding = ActivityCallDeliveryGayBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         check = CheckErrorUser(this)
 
         binding.textSenderData.text =

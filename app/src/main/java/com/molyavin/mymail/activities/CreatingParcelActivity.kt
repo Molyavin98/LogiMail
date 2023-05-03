@@ -34,7 +34,6 @@ class CreatingParcelActivity : AppCompatActivity(), CallbackListener {
         binding = ActivityCreatingParcelBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         dBParcel = DataBaseParcel(binding)
 
         binding.textSenderData.text = "Відправник\n${DataBaseAuth.fullName}\n${DataBaseAuth.phone}"

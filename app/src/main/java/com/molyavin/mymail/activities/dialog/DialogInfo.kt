@@ -37,8 +37,6 @@ class DialogInfo(private val callbackListener: CallbackListener) : DialogFragmen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         val btnDone: Button = view.findViewById(R.id.btnDone)
         val fieldNumber: TextInputLayout = view.findViewById(R.id.textNumPhone)
         val fieldFullName: TextInputLayout = view.findViewById(R.id.fieldFullName)

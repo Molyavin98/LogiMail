@@ -31,8 +31,6 @@ class RoadMapActivity : AppCompatActivity(), OnMapReadyCallback {
         binding = ActivityRoadMapBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)

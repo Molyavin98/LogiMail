@@ -27,7 +27,6 @@ class ProfileSettingActivity : AppCompatActivity() {
         binding = ActivityProfileSettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         mSettings = getSharedPreferences(USER_DATA_AUTH, Context.MODE_PRIVATE)
 

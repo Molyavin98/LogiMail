@@ -30,8 +30,6 @@ class RegistrationActivity : AppCompatActivity() {
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         check = CheckErrorUser(this)
         progressDialog = ProgressDialog(this)
         mAuth = FirebaseAuth.getInstance()

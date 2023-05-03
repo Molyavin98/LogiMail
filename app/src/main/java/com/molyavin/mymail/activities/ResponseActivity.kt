@@ -27,8 +27,6 @@ class ResponseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_response)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         btnSendResponse = findViewById(R.id.btnSendResponse)
         btnBack = findViewById(R.id.btnBack)
         fieldResponse = findViewById(R.id.fieldResponse)

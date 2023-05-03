@@ -32,8 +32,6 @@ class AllParcelInfoActivity : AppCompatActivity() {
         binding = ActivityAllParcelInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         val intent = intent
         var payment: Boolean? = null
         val number = intent.getStringExtra("number_sender")

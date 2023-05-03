@@ -29,8 +29,6 @@ class SplashScreenActivity : AppCompatActivity() {
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-
         mSettings = getSharedPreferences(USER_DATA_AUTH, Context.MODE_PRIVATE)
 
 
