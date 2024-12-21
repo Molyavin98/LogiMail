@@ -7,7 +7,6 @@ import android.net.ConnectivityManager
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import com.molyavin.mymail.MenuActivity
 import com.molyavin.mymail.R
 import com.molyavin.mymail.utis.CallbackListener
@@ -47,7 +46,7 @@ class CallDeliveryGayActivity : AppCompatActivity(), CallbackListener {
 
 
         binding.btnSendAplication.setOnClickListener {
-            sendAplication()
+            sendApplication()
         }
 
         binding.btnBack.setOnClickListener {
@@ -57,7 +56,7 @@ class CallDeliveryGayActivity : AppCompatActivity(), CallbackListener {
     }
 
 
-    private fun sendAplication() {
+    private fun sendApplication() {
 
         if (!check.checkIsEmpty(binding.editTypeParcel) || binding.addressesPeople.text.equals("Адреса")) {
             Toast.makeText(this, getString(R.string.text_toast_address), Toast.LENGTH_SHORT).show()

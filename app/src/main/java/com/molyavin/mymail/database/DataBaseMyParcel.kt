@@ -1,7 +1,10 @@
 package com.molyavin.mymail.database
 
-import android.util.Log
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.molyavin.mymail.creating_parcel.Adapter
 import com.molyavin.mymail.databinding.ActivityMyParcelsBinding
 import com.molyavin.mymail.utis.ParcelInfo
@@ -22,7 +25,7 @@ class DataBaseMyParcel(val binding: ActivityMyParcelsBinding) : DataBase() {
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                itemList = mutableListOf<ParcelInfo>()
+                itemList = mutableListOf()
 
                 val codes = dataSnapshot.children.map { it.key.toString() }
                 ttnCount = codes.size

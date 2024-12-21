@@ -14,8 +14,7 @@
         android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription">
-    </ImageButton>
+        tools:ignore="ContentDescription"></ImageButton>
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,27 +26,26 @@
         app:layout_constraintBottom_toBottomOf="@id/btnBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btnBack">
-    </TextView>
+        app:layout_constraintTop_toTopOf="@id/btnBack"></TextView>
 
     <View
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/blue"
+        android:background="@color/green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnBack"/>
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,10 +55,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/baseline_text_snippet_24"
+                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:layout_gravity="center">
-            </ImageView>
+                android:src="@drawable/baseline_text_snippet_24"></ImageView>
 
             <TextView
                 android:id="@+id/text_1"
@@ -69,16 +66,16 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:text="@string/text_info_sender"
-                android:textSize="12sp"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/blue"/>
+                android:background="@color/green" />
 
 
             <TextView
@@ -87,9 +84,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:text="@string/text_place_sender"
-                android:textSize="12sp"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,22 +103,22 @@
                         android:id="@+id/radioAddressSender"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
                         android:layout_weight="50"
+                        android:buttonTint="@color/green"
                         android:checked="true"
                         android:text="@string/text_address"
-                        android:textSize="12sp"
-                        android:buttonTint="@color/blue"
-                        android:layout_marginStart="20dp"/>
+                        android:textSize="12sp" />
 
                     <RadioButton
                         android:id="@+id/radioDepSender"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
                         android:layout_weight="50"
-                        android:textSize="12sp"
+                        android:buttonTint="@color/green"
                         android:text="@string/text_departament"
-                        android:buttonTint="@color/blue"
-                        android:layout_marginEnd="20dp"/>
+                        android:textSize="12sp" />
 
                 </RadioGroup>
             </LinearLayout>
@@ -131,55 +128,55 @@
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/blue"/>
+                android:background="@color/green" />
 
             <TextView
                 android:id="@+id/textHintSender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:textSize="10sp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/white"
                 android:gravity="start|center"
+                android:text="@string/text_address"
                 android:textAllCaps="false"
-                android:text="@string/text_address" />
+                android:textSize="10sp" />
 
 
             <TextView
                 android:id="@+id/addressesSender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:textSize="14sp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/white"
                 android:gravity="start|center"
-                android:textAllCaps="false"
                 android:text="@string/text_address"
+                android:textAllCaps="false"
+                android:textSize="14sp"
                 app:drawableEndCompat="@drawable/right_image" />
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textFieldSender"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:shapeAppearance="@style/Cut"
-                app:boxBackgroundColor="@color/white"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
                 android:visibility="gone"
-                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+                app:boxBackgroundColor="@color/white"
+                app:shapeAppearance="@style/Cut">
 
                 <AutoCompleteTextView
                     android:id="@+id/dropDownSender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Адреса відділення"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
                     android:gravity="start"
-                    android:inputType="none"/>
+                    android:inputType="none"
+                    android:text="Адреса відділення"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -188,7 +185,7 @@
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/blue"/>
+                android:background="@color/green" />
 
 
             <TextView
@@ -196,15 +193,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                tools:text="Відправник\nМолявін Артьом Іванович\n+380955528889"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:text="Відправник\nМолявін Артьом Іванович\n+380955528889" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/blue"/>
+                android:background="@color/green" />
 
             <TextView
                 android:id="@+id/text_2"
@@ -212,16 +209,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:text="@string/text_info_recipient"
-                android:textSize="12sp"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/blue"/>
+                android:background="@color/green" />
 
 
             <TextView
@@ -230,9 +227,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:text="@string/text_place_recipient"
-                android:textSize="12sp"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -249,22 +246,22 @@
                         android:id="@+id/radioAddressRecipient"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
                         android:layout_weight="50"
+                        android:buttonTint="@color/green"
                         android:checked="true"
-                        android:textSize="12sp"
                         android:text="@string/text_address"
-                        android:buttonTint="@color/blue"
-                        android:layout_marginStart="20dp"/>
+                        android:textSize="12sp" />
 
                     <RadioButton
                         android:id="@+id/radioDepRecipient"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
                         android:layout_weight="50"
-                        android:textSize="12sp"
+                        android:buttonTint="@color/green"
                         android:text="@string/text_departament"
-                        android:buttonTint="@color/blue"
-                        android:layout_marginEnd="20dp"/>
+                        android:textSize="12sp" />
 
                 </RadioGroup>
             </LinearLayout>
@@ -273,48 +270,48 @@
                 android:id="@+id/textHintRecipient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:textSize="10sp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/white"
                 android:gravity="start|center"
+                android:text="@string/text_address"
                 android:textAllCaps="false"
-                android:text="@string/text_address" />
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/addressesRecipient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:textSize="14sp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/white"
                 android:gravity="start|center"
-                android:textAllCaps="false"
                 android:text="@string/text_address"
+                android:textAllCaps="false"
+                android:textSize="14sp"
                 app:drawableEndCompat="@drawable/right_image" />
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textFieldRecipient"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:shapeAppearance="@style/Cut"
-                app:boxBackgroundColor="@color/white"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
                 android:visibility="gone"
-                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+                app:boxBackgroundColor="@color/white"
+                app:shapeAppearance="@style/Cut">
 
                 <AutoCompleteTextView
                     android:id="@+id/drop_downRecipient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/text_address_departament"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
                     android:gravity="start"
-                    android:inputType="none"/>
+                    android:inputType="none"
+                    android:text="@string/text_address_departament"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -323,19 +320,19 @@
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/blue"/>
+                android:background="@color/green" />
 
             <TextView
                 android:id="@+id/textInfoRecipient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:textSize="14sp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/white"
                 android:gravity="start|center"
-                android:textAllCaps="false"
                 android:text="@string/text_recipient"
+                android:textAllCaps="false"
+                android:textSize="14sp"
                 app:drawableEndCompat="@drawable/right_image" />
 
             <View
@@ -343,7 +340,7 @@
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/blue"/>
+                android:background="@color/green" />
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -353,10 +350,17 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
                 android:hint="@string/text_type_parcel"
-                app:endIconMode="clear_text"
                 android:scrollIndicators=""
-                app:counterMaxLength="100"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="@color/green"
+                app:boxCornerRadiusBottomEnd="12.dp"
+                app:boxCornerRadiusBottomStart="12.dp"
+                app:boxCornerRadiusTopEnd="12.dp"
+                app:boxCornerRadiusTopStart="12.dp"
                 app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line_7">
@@ -372,7 +376,7 @@
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/blue"/>
+                android:background="@color/green" />
 
             <TextView
                 android:id="@+id/textPay"
@@ -380,25 +384,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:text="@string/text_pay_parcel"
-                android:textSize="14sp"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchPay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:theme="@style/Color1SwitchStyle"
                 android:text="@string/text_pay_sender_recipient"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:theme="@style/Color1SwitchStyle" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/blue"/>
+                android:background="@color/green" />
 
             <Button
                 android:id="@+id/btnSendAplication"
@@ -407,9 +411,9 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/blue"
+                android:backgroundTint="@color/green"
                 android:text="@string/text_btn_create"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 

@@ -66,18 +66,9 @@ class Adapter() : RecyclerView.Adapter<Adapter.MyViewClass>() {
 
     class MyViewClass(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var ttn: TextView
-        var fullNameSender: TextView
-        var numberSender: TextView
-        var comment: TextView
-
-
-
-        init {
-            ttn = itemView.findViewById(R.id.ttnText)
-            fullNameSender = itemView.findViewById(R.id.fullNameSender)
-            numberSender = itemView.findViewById(R.id.numberSender)
-            comment = itemView.findViewById(R.id.textTypeParcel)
-        }
+        var ttn: TextView = itemView.findViewById(R.id.ttnText)
+        var fullNameSender: TextView = itemView.findViewById(R.id.fullNameSender)
+        var numberSender: TextView = itemView.findViewById(R.id.numberSender)
+        var comment: TextView = itemView.findViewById(R.id.textTypeParcel)
     }
 }

@@ -12,6 +12,7 @@ import com.molyavin.mymail.database.DataBaseAuth
 import com.molyavin.mymail.databinding.ActivityMenuBinding
 import com.molyavin.mymail.utis.NetworkChangeListener
 
+@Suppress("DEPRECATION")
 class MenuActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
@@ -30,12 +31,10 @@ class MenuActivity : AppCompatActivity() {
         dB = DataBaseAuth(userId)
         dB.readDataBase()
 
-
         onClickListener()
-
     }
 
-    private fun onClickListener(){
+    private fun onClickListener() {
 
         binding.btnSettingProf.setOnClickListener {
             startActivity(Intent(this, ProfileSettingActivity::class.java))
@@ -43,12 +42,12 @@ class MenuActivity : AppCompatActivity() {
         }
 
         binding.btnMyParcel.setOnClickListener {
-            startActivity(Intent(this,MyParcelsActivity::class.java))
+            startActivity(Intent(this, MyParcelsActivity::class.java))
             overridePendingTransition(R.anim.slideinback, R.anim.slideoutback)
         }
 
         binding.btnMap.setOnClickListener {
-            startActivity(Intent(this,RoadMapActivity::class.java))
+            startActivity(Intent(this, RoadMapActivity::class.java))
             overridePendingTransition(R.anim.slideinback, R.anim.slideoutback)
         }
 
@@ -59,7 +58,7 @@ class MenuActivity : AppCompatActivity() {
         }
 
         binding.btnCreateParcel.setOnClickListener {
-            startActivity(Intent(this,CreatingParcelActivity::class.java))
+            startActivity(Intent(this, CreatingParcelActivity::class.java))
             overridePendingTransition(R.anim.slidein, R.anim.slideout)
         }
 
@@ -70,14 +69,14 @@ class MenuActivity : AppCompatActivity() {
 
 
         binding.btnResponse.setOnClickListener {
-            startActivity(Intent(this,ResponseActivity::class.java))
+            startActivity(Intent(this, ResponseActivity::class.java))
             overridePendingTransition(R.anim.slidein, R.anim.slideout)
         }
     }
 
     override fun onStart() {
         val filter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
-        registerReceiver(networkChangeListener,filter)
+        registerReceiver(networkChangeListener, filter)
         super.onStart()
     }
 
@@ -86,6 +85,6 @@ class MenuActivity : AppCompatActivity() {
         super.onStop()
     }
 
-    @Deprecated("Deprecated in Java")
+    @Deprecated(message = "Deprecated in Java")
     override fun onBackPressed() {}
 }

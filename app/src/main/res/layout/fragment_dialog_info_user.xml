@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
 
@@ -15,29 +15,28 @@
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/cancel_image"
             android:layout_gravity="center"
             android:layout_marginStart="15dp"
             android:background="@color/white"
+            android:src="@drawable/cancel_image"
+            app:layout_constraintBottom_toBottomOf="@id/btnDone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/btnDone"
-            app:layout_constraintBottom_toBottomOf="@id/btnDone">
-        </ImageButton>
+            app:tint="@color/green" />
 
 
         <Button
             android:id="@+id/btnDone"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/text_btn_done"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_gravity=""
             android:layout_marginEnd="15dp"
-            android:textColor="@color/black"
+            android:text="@string/text_btn_done"
             android:textAllCaps="false"
+            android:textColor="@color/green"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </Button>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -45,35 +44,42 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_data_recipient"
         android:layout_marginStart="10dp"
+        android:text="@string/text_data_recipient"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="26sp">
-    </TextView>
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textNumPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:prefixText="+380"
-        app:counterEnabled="true"
-        app:counterMaxLength="9"
-        app:startIconDrawable="@drawable/phone"
-        android:hint="@string/text_phone"
-        app:endIconMode="clear_text"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
+        android:hint="@string/text_phone"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/green"
+        app:counterEnabled="true"
+        app:counterMaxLength="9"
+        app:hintTextColor="@color/white"
+        app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text">
+        app:layout_constraintTop_toBottomOf="@id/text"
+        app:boxCornerRadiusBottomEnd="12.dp"
+        app:boxCornerRadiusBottomStart="12.dp"
+        app:boxCornerRadiusTopEnd="12.dp"
+        app:boxCornerRadiusTopStart="12.dp"
+        app:prefixText="+380"
+        app:startIconDrawable="@drawable/phone"
+        app:startIconTint="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number|phone"/>
+            android:inputType="number|phone" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,6 +92,13 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:hint="@string/text_contact"
+        app:boxCornerRadiusBottomEnd="12.dp"
+        app:boxCornerRadiusBottomStart="12.dp"
+        app:boxCornerRadiusTopEnd="12.dp"
+        app:boxCornerRadiusTopStart="12.dp"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/green"
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText

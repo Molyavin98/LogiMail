@@ -35,7 +35,7 @@
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/blue"
+        android:background="@color/green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnBack">
@@ -90,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="5dp"
-            android:background="@color/blue" />
+            android:background="@color/green" />
 
         <TextView
             android:id="@+id/addressesPeople"
@@ -112,7 +112,7 @@
             android:id="@+id/line_3"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/blue" />
+            android:background="@color/green" />
 
 
         <TextView
@@ -129,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:background="@color/blue" />
+            android:background="@color/green" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editTypeParcel"
@@ -139,6 +139,12 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="15dp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/green"
+            app:boxCornerRadiusBottomEnd="12.dp"
+            app:boxCornerRadiusBottomStart="12.dp"
+            app:boxCornerRadiusTopEnd="12.dp"
+            app:boxCornerRadiusTopStart="12.dp"
             android:hint="@string/text_type_parcel"
             app:endIconMode="clear_text">
 
@@ -154,7 +160,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
 
-            android:background="@color/blue"/>
+            android:background="@color/green"/>
 
 
         <TextView
@@ -184,7 +190,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:background="@color/blue"/>
+            android:background="@color/green"/>
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -200,6 +206,12 @@
             android:scrollIndicators=""
             app:counterMaxLength="100"
             app:counterEnabled="true"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/green"
+            app:boxCornerRadiusBottomEnd="12.dp"
+            app:boxCornerRadiusBottomStart="12.dp"
+            app:boxCornerRadiusTopEnd="12.dp"
+            app:boxCornerRadiusTopStart="12.dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/line_7">
@@ -217,7 +229,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/blue"
+            android:backgroundTint="@color/green"
             android:text="@string/text_btn_send"
             android:textAllCaps="false"/>
 

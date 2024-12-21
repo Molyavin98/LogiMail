@@ -20,7 +20,8 @@
             android:background="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/btnDone"
-            app:layout_constraintBottom_toBottomOf="@id/btnDone">
+            app:layout_constraintBottom_toBottomOf="@id/btnDone"
+            app:tint="@color/green">
         </ImageButton>
 
 
@@ -30,9 +31,10 @@
             android:layout_height="wrap_content"
             android:text="@string/text_btn_done"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
+
             android:layout_gravity=""
             android:layout_marginEnd="15dp"
-            android:textColor="@color/black"
+            android:textColor="@color/green"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -60,6 +62,12 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/green"
+        app:boxCornerRadiusBottomEnd="12.dp"
+        app:boxCornerRadiusBottomStart="12.dp"
+        app:boxCornerRadiusTopEnd="12.dp"
+        app:boxCornerRadiusTopStart="12.dp"
         android:hint="@string/text_hint_city"
         app:endIconMode="clear_text">
 
@@ -77,6 +85,12 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
+        android:textColorHint="@color/white"
+        app:boxCornerRadiusBottomEnd="12.dp"
+        app:boxCornerRadiusBottomStart="12.dp"
+        app:boxCornerRadiusTopEnd="12.dp"
+        app:boxCornerRadiusTopStart="12.dp"
+        app:boxBackgroundColor="@color/green"
         android:hint="@string/text_hint_street"
         app:endIconMode="clear_text">
 
@@ -93,6 +107,12 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/green"
+        app:boxCornerRadiusBottomEnd="12.dp"
+        app:boxCornerRadiusBottomStart="12.dp"
+        app:boxCornerRadiusTopEnd="12.dp"
+        app:boxCornerRadiusTopStart="12.dp"
         android:hint="@string/text_hint_apartments"
         app:endIconMode="clear_text">
 

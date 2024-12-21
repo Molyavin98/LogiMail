@@ -33,7 +33,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
 
         val animForImage = AnimationUtils.loadAnimation(this@SplashScreenActivity, R.anim.anim)
-        binding.image.animation = animForImage
+        binding.text.animation = animForImage
         animForImage.hasEnded()
 
         Handler().postDelayed({
