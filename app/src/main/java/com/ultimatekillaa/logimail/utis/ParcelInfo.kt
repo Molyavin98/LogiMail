@@ -12,6 +12,7 @@ class ParcelInfo {
     var comment: String? = null
     var payment: Boolean = false
 
+    constructor() {}
     constructor(
         ttn: String?,
         fullNameSender: String?,

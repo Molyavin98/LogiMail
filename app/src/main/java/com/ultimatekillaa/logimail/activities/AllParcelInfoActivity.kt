@@ -119,7 +119,7 @@ class AllParcelInfoActivity : AppCompatActivity() {
             .setMessage(getString(R.string.text_cancel_parcel))
             .setPositiveButton(getString(R.string.text_yes), listener)
             .setNegativeButton(getString(R.string.text_no), listener)
-            .setIcon(R.drawable.icon)
+            .setIcon(R.drawable.ic_app)
             .create()
 
         dialog.show()
