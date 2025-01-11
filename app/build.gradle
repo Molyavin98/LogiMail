@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.molyavin.mymail'
+    namespace 'com.ultimatekillaa.logimail'
     compileSdk 34
 
     defaultConfig {
